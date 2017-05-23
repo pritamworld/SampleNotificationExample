@@ -3,6 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="color_app_l">#000000</color>
-    <color name="color_app_t">#BF2600</color>
+    <color name="color_app_lexus">#000000</color>
+    <color name="color_app_toyota">#BF2600</color>
 </resources>
