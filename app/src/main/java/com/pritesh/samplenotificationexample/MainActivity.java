@@ -34,27 +34,27 @@ public class MainActivity extends Activity
 
         notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP |
                 Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        notificationIntent.putExtra("jsonPushMsg", "Welcome");
-        notificationIntent.putExtra("myGcmId", "" + notificationId);
+        notificationIntent.putExtra("jsonPushMessage", "Welcome");
+        notificationIntent.putExtra("GCMid", "" + notificationId);
         notificationIntent.setAction("Yes");
         PendingIntent pendingNotificationIntent = PendingIntent.getActivity(this, notificationId, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext());
-        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.app_icon);
+        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.tfs_large_notify_icon);
         builder.setPriority(NotificationCompat.PRIORITY_MAX)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setLargeIcon(largeIcon)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
                 .setContentText(message)
-                .setContentIntent(pendingNotificationIntent)
-                .addAction(0, "Yes", pendingNotificationIntent)
-                .addAction(0, "No", pendingNotificationIntent);
+                .setContentIntent(pendingNotificationIntent);
+                //.addAction(0, "Yes", pendingNotificationIntent)
+                //.addAction(0, "No", pendingNotificationIntent);
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            builder.setColor(getResources().getColor(R.color.color_app_t));
-            builder.setSmallIcon(R.drawable.ic_action_note);
+            builder.setColor(getResources().getColor(R.color.color_app_toyota));
+            builder.setSmallIcon(R.drawable.tfs_notify_icon);
         } else {
             builder.setContentTitle(getString(R.string.app_name));
-            builder.setColor(getResources().getColor(R.color.color_app_t));
-            builder.setSmallIcon(R.drawable.ic_action_note);
+            builder.setColor(getResources().getColor(R.color.color_app_toyota));
+            builder.setSmallIcon(R.drawable.tfs_notify_icon);
         }
         builder.setAutoCancel(true);
 
