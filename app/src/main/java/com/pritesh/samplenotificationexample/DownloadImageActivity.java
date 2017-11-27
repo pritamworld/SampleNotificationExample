@@ -17,7 +17,6 @@ public class DownloadImageActivity extends AppCompatActivity
 {
 
     // Set your Image URL into a string
-    //String URL = "http://www.androidbegin.com/wp-content/uploads/2013/07/HD-Logo.gif";
     String URL = "http://api.androidhive.info/images/sample.jpg";
     ImageView image;
     Button button;
@@ -75,15 +74,10 @@ public class DownloadImageActivity extends AppCompatActivity
             Bitmap bitmap = null;
             try
             {
-                //return BitmapFactory.decodeStream((InputStream) new java.net.URL(imageURL).getContent());
-                // Download Image from URL
-                //InputStream input = new java.net.URL(imageURL).openStream();
-                // Decode Bitmap
-                //bitmap = BitmapFactory.decodeStream(input);
                 return getBitmap(imageURL);
             } catch (Exception e)
             {
-                e.printStackTrace();
+                Log.d("ERROR",e.toString());
             }
             return bitmap;
         }
