@@ -48,8 +48,7 @@ public class MainActivity extends Activity
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
                 .setContentText(message)
                 .setContentIntent(pendingNotificationIntent);
-                //.addAction(0, "Yes", pendingNotificationIntent)
-                //.addAction(0, "No", pendingNotificationIntent);
+                
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             builder.setColor(getResources().getColor(R.color.color_app_toyota));
             builder.setSmallIcon(R.drawable.tfs_notify_icon);
