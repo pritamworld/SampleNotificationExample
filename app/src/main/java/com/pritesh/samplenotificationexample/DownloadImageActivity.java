@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.util.Log;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
