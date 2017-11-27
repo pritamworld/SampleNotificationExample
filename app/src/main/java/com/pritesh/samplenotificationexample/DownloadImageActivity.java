@@ -17,7 +17,7 @@ public class DownloadImageActivity extends AppCompatActivity
 {
 
     // Set your Image URL into a string
-    String URL = "http://api.androidhive.info/images/sample.jpg";
+    String url = "http://api.androidhive.info/images/sample.jpg";
     ImageView image;
     Button button;
     ProgressDialog mProgressDialog;
@@ -41,7 +41,7 @@ public class DownloadImageActivity extends AppCompatActivity
             {
 
                 // Execute DownloadImage AsyncTask
-                new DownloadImage().execute(URL);
+                new DownloadImage().execute(url);
             }
         });
     }
@@ -66,10 +66,10 @@ public class DownloadImageActivity extends AppCompatActivity
         }
 
         @Override
-        protected Bitmap doInBackground(String... URL)
+        protected Bitmap doInBackground(String... urls)
         {
 
-            String imageURL = URL[0];
+            String imageURL = urls[0];
 
             Bitmap bitmap = null;
             try
