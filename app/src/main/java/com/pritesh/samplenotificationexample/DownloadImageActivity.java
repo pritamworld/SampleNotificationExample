@@ -94,9 +94,8 @@ public class DownloadImageActivity extends AppCompatActivity
             // Close progress dialog
             mProgressDialog.dismiss();
         }
-    }
-
-    private Bitmap getBitmap(String url)
+        
+        private Bitmap getBitmap(String url)
     {
 
         //from web
@@ -115,5 +114,6 @@ public class DownloadImageActivity extends AppCompatActivity
         {
             return null;
         }
+    }
     }
 }
