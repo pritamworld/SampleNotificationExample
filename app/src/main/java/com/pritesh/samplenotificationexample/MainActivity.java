@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.view.View;
 
-//TODO Main Activity code
 public class MainActivity extends Activity
 {
     NotificationManager notifyMgr;
@@ -26,7 +25,6 @@ public class MainActivity extends Activity
         getValue = 0;
     }
 
-//TODO Display custom notification function
     private void customNotification(String message)
     {
         int notificationId = getValue;
