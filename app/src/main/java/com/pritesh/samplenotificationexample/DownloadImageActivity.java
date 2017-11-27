@@ -112,7 +112,6 @@ public class DownloadImageActivity extends AppCompatActivity
             return bitmap;
         } catch (Exception ex)
         {
-            //ex.printStackTrace();
             return null;
         }
     }
